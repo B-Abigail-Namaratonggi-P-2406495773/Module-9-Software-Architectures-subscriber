@@ -32,7 +32,7 @@ Berikut adalah *screenshot* konsol yang menampilkan 3 *subscriber* berjalan bers
 
 **1. Mengapa lonjakan (spike) antrean pesan turun lebih cepat?**
 
-Pada grafik di atas, terlihat *Queued messages* menjadi **6**. Hal ini terjadi karena kita melakukan *horizontal scaling* dengan menjalankan 3 *subscriber* (pekerja) secara bersamaan.
+Pada grafik di atas, terlihat *Queued messages* menjadi **5**. Hal ini terjadi karena kita melakukan *horizontal scaling* dengan menjalankan 3 *subscriber* (pekerja) secara bersamaan.
 
 RabbitMQ mendistribusikan tumpukan pesan tersebut secara paralel menggunakan metode **Round-Robin**. Karena beban kerja kini dibagi rata kepada 3 *subscriber* sekaligus, proses eksekusi menjadi jauh lebih cepat dan antrean pesan di dalam *queue* dapat segera dikosongkan dibandingkan saat hanya mengandalkan satu *subscriber* yang lambat.
 
